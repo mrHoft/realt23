@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  *:focus {
+    outline: none !important;
+  }
+
+  *:focus-visible {
+    outline: none !important;
+  }
+
+  *:focus-within {
+    outline: none !important;
+  }
+
+  input:focus,
+  select:focus,
+  button:focus,
+  textarea:focus {
+    outline: none !important;
+    ring: none !important;
+    box-shadow: none !important;
+  }
+
+  .link_icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s linear;
+  }
+
+  .dark .link_icon {
+    filter: invert()
+  }
+}

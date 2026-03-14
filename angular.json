@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "realt": {
+    "realt23": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -53,10 +53,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "realt:build:production"
+              "buildTarget": "realt23:build:production"
             },
             "development": {
-              "buildTarget": "realt:build:development"
+              "buildTarget": "realt23:build:development"
             }
           },
           "defaultConfiguration": "development"
