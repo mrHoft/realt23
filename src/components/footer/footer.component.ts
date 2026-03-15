@@ -10,9 +10,14 @@ import { RouterLink } from '@angular/router';
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <!-- Copyright -->
-          <a href="https://github.com/daytec-org" target="_blank" class="text-gray-600 dark:text-gray-300">
-            © 2026 Daytec
-          </a>
+          <div class="flex space-x-6">
+            <a href="https://github.com/daytec-org" target="_blank" class="text-gray-600 dark:text-gray-300">
+              © 2026 Daytec
+            </a>
+            <a routerLink="/presentation">
+              <img class="link_icon" width="24" src="/icons/presentation.svg" alt="presentation"/>
+            </a>
+          </div>
 
           <!-- Links -->
           <div class="flex space-x-6">
