@@ -1,0 +1,119 @@
+<div class="presentation-container">
+  <div class="nav-dots">
+    @for (index of slideIndices; track index) {
+    <div class="dot" [class.active]="index === activeSlideIndex()" (click)="onDotClick(index)"
+      [attr.aria-label]="'Перейти к слайду ' + (index + 1)" role="button" tabindex="0">
+    </div>
+    }
+  </div>
+
+  <div class="nav-hint">
+    <span>← ↑ → ↓ или Пробел для навигации</span>
+    <span>F11 для полноэкранного режима</span>
+  </div>
+
+  <div class="slides-container">
+    <section #slide class="slide" id="slide-1">
+      <div class="slide-content">
+        <div class="badge">CRM нового поколения</div>
+        <h1>Умная CRM без лишних глаз</h1>
+
+        <h3>Черновики под контролем</h3>
+        <p>Система позволяет хранить все данные по объектам, которые находятся в работе, но еще не готовы к
+          публикации.
+          Ни одна черновая карточка не попадает в открытый каталог — только то, что вы решили показать.</p>
+
+        <h3>Личный кабинет с полной историей</h3>
+        <p>По каждому объекту ведется детальная история изменений. В личном кабинете доступна общая аналитика по всем
+          лотам: статистика просмотров, сроки продаж, эффективность.</p>
+
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Контроль публикаций</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Доступ к истории</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Аналитика в реальном времени</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section #slide class="slide" id="slide-2">
+      <div class="slide-content">
+        <div class="badge">Коллаборация</div>
+        <h1>Командная работа</h1>
+
+        <h3>Простое добавление коллег</h3>
+        <p>Достаточно добавить другого агента в свой профиль, и ему автоматически становятся доступны все ваши объекты
+          с
+          пометкой share. Никаких сложных настроек доступа — просто работа в команде.</p>
+
+        <h3>Общий пул объектов</h3>
+        <p>Агентство получает единое пространство для работы: все видят объекты коллег, исключая дублирование и
+          путаницу.</p>
+
+        <ul>
+          <li>Мгновенный доступ для коллег</li>
+          <li>Автоматическая синхронизация</li>
+          <li>Исключение дублирования объектов</li>
+          <li>Единая база агентства</li>
+        </ul>
+      </div>
+    </section>
+
+    <section #slide class="slide" id="slide-3">
+      <div class="slide-content">
+        <div class="badge">Доверие клиентов</div>
+        <h1>Репутация как актив</h1>
+
+        <h3>Публичный рейтинг агентов</h3>
+        <p>Каждый агент формирует свою репутацию прямо на платформе. Прозрачные рейтинги помогают клиентам делать
+          осознанный выбор, а добросовестным агентам — получать больше лидов.</p>
+
+        <h3>Сбор откликов от клиентов</h3>
+        <p>Довольные покупатели и продавцы могут оставлять отзывы, которые проходят модерацию (AI + человек). Это
+          создает честную обратную связь и повышает доверие к агентству.</p>
+
+        <div class="stats" [style.background]="'linear-gradient(135deg, #ebf4ff 0%, #c3dafe 100%)'">
+          <div class="stat-item">
+            <div class="stat-number">5★</div>
+            <div class="stat-label">Прозрачный рейтинг</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">AI</div>
+            <div class="stat-label">Умная модерация</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">↑40%</div>
+            <div class="stat-label">Больше лидов</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section #slide class="slide" id="slide-4">
+      <div class="slide-content">
+        <div class="badge">Trusted программа</div>
+        <h1>Доверие = Скорость</h1>
+
+        <h3>Статус «Trusted» — публикация без ЭЦП</h3>
+        <p>Агенты, подтвердившие свою надежность и удерживающие статус trusted, получают важное преимущество:
+          возможность публиковать объявления о продаже без прохождения валидации электронной подписи на каждом
+          документе.</p>
+
+        <div class="trusted-highlight">
+          <p>
+            <strong>Экономия часов работы</strong> и ускорение вывода объектов на рынок при сохранении высокого уровня
+            проверки данных.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
