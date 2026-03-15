@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 export interface Achievement {
   label: string;
-  value: string;
+  value: number;
 }
 
 @Injectable({
@@ -10,11 +10,11 @@ export interface Achievement {
 })
 export class AchievementsService {
   private dummyAchievementsData: Achievement[] = [
-    { label: 'Properties for sale', value: '150+' },
-    { label: 'Properties sold', value: '500+' },
-    { label: 'Expert agents', value: '25+' },
-    { label: 'Developers', value: '40+' },
-    { label: 'Happy clients', value: '500+' }
+    { label: 'Недвижимость на продажу', value: 150 },
+    { label: 'Продано', value: 500 },
+    { label: 'Экспертные агенты', value: 25 },
+    { label: 'Застройщики', value: 40 },
+    { label: 'Довольные клиенты', value: 500 }
   ];
 
   getAchievements(): Promise<Achievement[]> {

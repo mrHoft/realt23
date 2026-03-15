@@ -1,11 +1,12 @@
 import { Component, Input, signal, inject } from '@angular/core';
 import { Property } from '../../interfaces/property.interface';
 import { ModalService } from '../../services/modal.service';
+import { CustomCurrencyPipe } from '../../pipe/custom-currency.pipe';
 
 @Component({
   selector: 'app-property-card',
   standalone: true,
-  imports: [],
+  imports: [CustomCurrencyPipe],
   template: `
     <div
       class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
@@ -77,8 +78,8 @@ import { ModalService } from '../../services/modal.service';
 
         <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-1">{{ property.title }}</h3>
         <div class="flex items-center justify-between mb-2">
-          <span class="text-xl font-bold text-blue-600 dark:text-blue-400">{{ property.price }}</span>
-          <span class="text-sm text-gray-500 dark:text-gray-400">{{ property.sqft }} sqft</span>
+          <span class="text-xl font-bold text-blue-600 dark:text-blue-400">{{ property.price | customCurrency }} {{ property.currency }}</span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">{{ property.square }} кв.м</span>
         </div>
 
         <div class="flex items-center text-gray-600 dark:text-gray-300 mb-2">

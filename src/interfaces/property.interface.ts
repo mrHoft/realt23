@@ -1,17 +1,22 @@
+export type TCurrency = '₽' | '$' | '€';
+export type PropertyType = 'All' | 'House' | 'Apartment' | 'Condo' | 'Townhouse' | 'Land' | 'NRA' /* Non-Residential Apartment */;
+export type PropertyStatus = 'Just listed' | 'Sold' | 'Luxury' | 'From developer';
+
 export interface Property {
   id: number;
   title: string;
-  price: string;
+  price: number;
+  currency: TCurrency
   location: string;
   address: string;
-  sqft: number;
+  square: number;
   bedrooms: number;
   bathrooms: number;
   yearBuilt: number;
-  type: 'House' | 'Apartment' | 'Condo' | 'Townhouse';
+  type: PropertyType;
   description: string;
   images: string[];
-  status: 'Just listed' | 'Sold' | 'Luxury' | 'From developer';
+  status: PropertyStatus;
   agent: Agent;
   rating: number;
 }
@@ -24,8 +29,8 @@ export interface Agent {
 export interface PropertyFilters {
   location: string;
   type: string;
-  minPrice: string;
-  maxPrice: string;
+  minPrice: number;
+  maxPrice: number;
 }
 
 export interface Achievement {

@@ -1,10 +1,10 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { PropertyFilters } from '../../interfaces/property.interface';
+import { PROPERTY_TYPES, PRICE_OPTIONS } from '../../constants/property.constants';
 
 @Component({
   selector: 'app-search-filters',
-  standalone: true,
   imports: [FormsModule],
   template: `
     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
@@ -12,12 +12,11 @@ import { PropertyFilters } from '../../interfaces/property.interface';
         <!-- Location -->
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Location
+            Расположение
           </label>
           <input
             type="text"
             [(ngModel)]="filters.location"
-            placeholder="City or area"
             class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
           >
         </div>
@@ -25,57 +24,45 @@ import { PropertyFilters } from '../../interfaces/property.interface';
         <!-- Property type -->
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Property type
+            Тип недвижимости
           </label>
           <select
             [(ngModel)]="filters.type"
             class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
           >
-            <option value="">All types</option>
-            <option value="House">House</option>
-            <option value="Apartment">Apartment</option>
-            <option value="Condo">Condo</option>
-            <option value="Townhouse">Townhouse</option>
+            @for (option of propertyTypes; track option.value) {
+              <option [value]="option.value">{{ option.label }}</option>
+            }
           </select>
         </div>
 
         <!-- Min price -->
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Min price
+            Мин. цена
           </label>
           <select
             [(ngModel)]="filters.minPrice"
             class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
           >
-            <option value="">No min</option>
-            <option value="$100,000">$100k</option>
-            <option value="$250,000">$250k</option>
-            <option value="$500,000">$500k</option>
-            <option value="$750,000">$750k</option>
-            <option value="$1,000,000">$1M</option>
-            <option value="$2,000,000">$2M</option>
-            <option value="$5,000,000">$5M+</option>
+            @for (option of priceOptions; track option.value) {
+              <option [value]="option.value">{{ option.label }}</option>
+            }
           </select>
         </div>
 
         <!-- Max price -->
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-            Max price
+            Макс. цена
           </label>
           <select
             [(ngModel)]="filters.maxPrice"
             class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
           >
-            <option value="">No max</option>
-            <option value="$250,000">$250k</option>
-            <option value="$500,000">$500k</option>
-            <option value="$750,000">$750k</option>
-            <option value="$1,000,000">$1M</option>
-            <option value="$2,000,000">$2M</option>
-            <option value="$5,000,000">$5M</option>
-            <option value="$10,000,000">$10M+</option>
+            @for (option of priceOptions; track option.value) {
+              <option [value]="option.value">{{ option.label }}</option>
+            }
           </select>
         </div>
       </div>
@@ -83,22 +70,29 @@ import { PropertyFilters } from '../../interfaces/property.interface';
       <!-- Search button -->
       <div class="mt-4 flex justify-end">
         <button
-          (click)="search.emit(filters)"
+          (click)="onSearch()"
           class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
-          Search Properties
+          Поиск
         </button>
       </div>
     </div>
   `
 })
 export class SearchFiltersComponent {
-  filters: PropertyFilters = {
+  protected readonly search = output<PropertyFilters>();
+
+  protected filters: PropertyFilters = {
     location: '',
     type: '',
-    minPrice: '',
-    maxPrice: ''
+    minPrice: 0,
+    maxPrice: 0
   };
 
-  @Output() search = new EventEmitter<PropertyFilters>();
+  protected readonly propertyTypes = PROPERTY_TYPES;
+  protected readonly priceOptions = PRICE_OPTIONS;
+
+  protected onSearch(): void {
+    this.search.emit(this.filters);
+  }
 }

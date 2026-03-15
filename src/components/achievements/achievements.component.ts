@@ -82,14 +82,7 @@ export class AchievementsComponent implements OnInit, AfterViewInit, OnDestroy {
       return 0;
     }
 
-    const achievement = this.achievements()[index];
-    const currentValue = values[index];
-
-    if (typeof achievement.value === 'string') {
-      return achievement.value.replace(/\d+/, currentValue.toString());
-    }
-
-    return currentValue;
+    return values[index];
   }
 
   private loadData(): void {

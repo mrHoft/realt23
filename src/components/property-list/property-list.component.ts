@@ -16,7 +16,7 @@ import { PropertyModalComponent } from '../property-modal/property-modal.compone
   template: `
     <div class="flex justify-between items-center mb-6">
       <p class="text-gray-600 dark:text-gray-300">
-        Found {{ properties.length }} properties
+        Найдено {{ properties.length }} объектов недвижимости
       </p>
       <app-grid-list-toggle
         [currentView]="viewMode()"
@@ -46,7 +46,7 @@ import { PropertyModalComponent } from '../property-modal/property-modal.compone
     @if (!loading && properties.length === 0) {
       <div class="text-center py-12">
         <p class="text-gray-600 dark:text-gray-300 text-lg">
-          No properties found matching your criteria.
+          Объекты, соответствующие вашим критериям, не найдены.
         </p>
       </div>
     }

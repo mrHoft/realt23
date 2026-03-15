@@ -1,9 +1,11 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Property } from '../../interfaces/property.interface';
+import { CustomCurrencyPipe } from '../../pipe/custom-currency.pipe';
 
 @Component({
   selector: 'app-property-modal',
   standalone: true,
+  imports: [CustomCurrencyPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (property) {
@@ -66,7 +68,7 @@ import { Property } from '../../interfaces/property.interface';
               <!-- Title and price -->
               <div class="flex justify-between items-start mb-4 border-b border-gray-100 dark:border-gray-700 pb-4">
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white break-words pr-4">{{ property.title }}</h3>
-                <span class="text-2xl font-bold text-blue-600 dark:text-blue-400 whitespace-nowrap">{{ property.price }}</span>
+                <span class="text-2xl font-bold text-blue-600 dark:text-blue-400 whitespace-nowrap">{{ property.price | customCurrency }} {{ property.currency }}</span>
               </div>
 
               <!-- Location and address -->
@@ -89,25 +91,21 @@ import { Property } from '../../interfaces/property.interface';
                   <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
                   </svg>
-                  <span class="text-gray-700 dark:text-gray-200">{{ property.sqft }} sqft</span>
+                  <span class="text-gray-700 dark:text-gray-200">{{ property.square }} кв.м</span>
                 </div>
                 <div class="flex items-center">
-                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-200">{{ property.bedrooms }} beds</span>
+                  <img src="/icons/bedroom.svg" alt="bedroom" class="w-5 h-5 mr-2"/>
+                  <span class="text-gray-700 dark:text-gray-200">{{ property.bedrooms }} спален</span>
                 </div>
                 <div class="flex items-center">
-                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                  </svg>
-                  <span class="text-gray-700 dark:text-gray-200">{{ property.bathrooms }} baths</span>
+                  <img src="/icons/bathroom.svg" alt="bathroom" class="w-5 h-5 mr-2"/>
+                  <span class="text-gray-700 dark:text-gray-200">{{ property.bathrooms }} санузлов</span>
                 </div>
                 <div class="flex items-center">
                   <svg class="w-5 h-5 text-gray-500 dark:text-gray-400 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
-                  <span class="text-gray-700 dark:text-gray-200">Built {{ property.yearBuilt }}</span>
+                  <span class="text-gray-700 dark:text-gray-200">Построено {{ property.yearBuilt }}</span>
                 </div>
               </div>
 

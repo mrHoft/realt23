@@ -30,6 +30,6 @@
   }
 
   .dark .link_icon {
-    filter: invert()
+    filter: invert();
   }
 }

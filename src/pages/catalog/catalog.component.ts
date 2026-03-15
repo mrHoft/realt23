@@ -14,7 +14,7 @@ import { SearchFiltersComponent } from '../../components/search-filters/search-f
   template: `
     <div class="container mx-auto px-4 py-8">
       <h1 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">
-        Property Catalog
+        Каталог недвижимости
       </h1>
 
       <!-- Filters -->

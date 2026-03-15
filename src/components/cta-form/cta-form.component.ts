@@ -10,10 +10,10 @@ import { FormsModule } from '@angular/forms';
       <div class="container mx-auto px-4">
         <div class="max-w-2xl mx-auto text-center">
           <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">
-            Contact with manager
+            Связаться с менеджером
           </h2>
           <p class="text-xl mb-8 text-gray-600 dark:text-gray-300">
-            Get personalized assistance in finding your dream property
+            Получите индивидуальную помощь в поиске недвижимости вашей мечты
           </p>
 
           <form (ngSubmit)="onSubmit()" class="space-y-4">
@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
                 type="text"
                 [(ngModel)]="formData.name"
                 name="name"
-                placeholder="Your name"
+                placeholder="Ваше имя"
                 required
                 class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
               >
@@ -30,7 +30,7 @@ import { FormsModule } from '@angular/forms';
                 type="email"
                 [(ngModel)]="formData.email"
                 name="email"
-                placeholder="Email address"
+                placeholder="Email адрес"
                 required
                 class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
               >
@@ -39,14 +39,14 @@ import { FormsModule } from '@angular/forms';
               type="tel"
               [(ngModel)]="formData.phone"
               name="phone"
-              placeholder="Phone number"
+              placeholder="Номер телефона"
               required
               class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
             >
             <textarea
               [(ngModel)]="formData.message"
               name="message"
-              placeholder="Your message"
+              placeholder="Текст сообщения"
               rows="4"
               class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
             ></textarea>
@@ -54,7 +54,7 @@ import { FormsModule } from '@angular/forms';
               type="submit"
               class="w-full md:w-auto px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
-              Send message
+              Отправить сообщение
             </button>
           </form>
         </div>

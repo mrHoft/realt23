@@ -22,17 +22,11 @@ import { HeroComponent } from '../../components/hero/hero.component';
 
     <section class="py-16 bg-white dark:bg-gray-900">
       <div class="container mx-auto px-4">
-        <app-property-list
-          [properties]="featuredProperties()"
-          [loading]="false"
-        />
+        <app-property-list [properties]="featuredProperties()" [loading]="false" />
 
         <div class="text-center mt-8">
-          <a
-            routerLink="/catalog"
-            class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            View all properties
+          <a routerLink="/catalog" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            Смотреть всё
             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linecap="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>

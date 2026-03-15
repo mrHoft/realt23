@@ -10,17 +10,17 @@ import { RouterLink } from '@angular/router';
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <!-- Copyright -->
-          <div class="text-gray-600 dark:text-gray-300">
+          <a href="https://github.com/daytec-org" target="_blank" class="text-gray-600 dark:text-gray-300">
             © 2026 Daytec
-          </div>
+          </a>
 
           <!-- Links -->
           <div class="flex space-x-6">
             <a routerLink="/privacy" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              Privacy Policy
+              Политика конфиденциальности
             </a>
             <a routerLink="/offer" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              Public offer
+              Публичная офёрта
             </a>
             <a href="https://t.me/some_link" target="_blank">
               <img class="link_icon" width="24" src="/icons/telegram.svg" alt="telegram"/>
