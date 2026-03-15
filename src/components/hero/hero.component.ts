@@ -1,13 +1,17 @@
 import { Component, inject, AfterViewInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ThemeService } from '../../services/theme.service';
+import { ConstructionBadgeComponent } from '../badge/construction-badge.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ConstructionBadgeComponent],
   template: `
     <section class="relative h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
+      <!-- Badges -->
+      <app-construction-badge/>
+
       <!-- Video Background -->
       <div class="absolute inset-0 w-full h-full">
         <video
