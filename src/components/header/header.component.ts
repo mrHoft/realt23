@@ -12,7 +12,7 @@ import { ThemeService } from '../../services/theme.service';
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <a routerLink="/" class="flex items-center space-x-2">
-          <img src="/icons/house.svg" alt="logo" class="w-8 h-8"/>
+          <img src="/icons/logo.svg" alt="logo" class="w-8 h-8"/>
           <span class="text-xl font-bold text-gray-800 dark:text-white transition-colors duration-200">realt23</span>
         </a>
 
