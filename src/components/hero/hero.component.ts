@@ -1,4 +1,4 @@
-import { Component, inject, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, inject, AfterViewInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ThemeService } from '../../services/theme.service';
 
@@ -11,17 +11,11 @@ import { ThemeService } from '../../services/theme.service';
       <!-- Video Background -->
       <div class="absolute inset-0 w-full h-full">
         <video
-          #heroVideo
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
+          #heroVideo autoplay muted loop playsinline preload="auto"
           class="absolute min-w-full min-h-full object-cover"
           [class.opacity-50]="themeService.isDark()"
         >
-          <source src="/promo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+          <source src="/images/promo.mp4" type="video/mp4">
         </video>
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
@@ -30,10 +24,10 @@ import { ThemeService } from '../../services/theme.service';
       <!-- Content (unchanged) -->
       <div class="relative container mx-auto px-4 text-center z-10">
         <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-          Discover your dream property
+          Найдите дом своей мечты (demo)
         </h1>
         <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto drop-shadow">
-          Find the perfect home from our extensive collection of luxury properties
+          (дальше на английском: так проще писать код)
         </p>
 
         <!-- Simplified search form -->
@@ -81,7 +75,7 @@ import { ThemeService } from '../../services/theme.service';
       </div>
 
       <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div #scrollIndicator class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" [style.display]="showScrollIndicator ? 'block' : 'none'">
         <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
@@ -90,12 +84,21 @@ import { ThemeService } from '../../services/theme.service';
   `
 })
 export class HeroComponent implements AfterViewInit {
-  themeService = inject(ThemeService);
+  public themeService = inject(ThemeService);
+  public showScrollIndicator = true;
 
   @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
+  @ViewChild('scrollIndicator') scrollIndicator!: ElementRef<HTMLElement>;
 
-  ngAfterViewInit(): void {
+  @HostListener('window:scroll')
+  public onWindowScroll(): void {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.showScrollIndicator = scrollPosition <= 20;
+  }
+
+  public ngAfterViewInit(): void {
     this.ensureVideoPlays();
+    this.onWindowScroll();
   }
 
   private ensureVideoPlays(): void {

@@ -1,4 +1,3 @@
-// services/api.service.ts
 import { Injectable } from '@angular/core';
 import { Property, PropertyFilters } from '../interfaces/property.interface';
 

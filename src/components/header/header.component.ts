@@ -1,4 +1,3 @@
-// components/header/header.component.ts
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ThemeService } from '../../services/theme.service';
