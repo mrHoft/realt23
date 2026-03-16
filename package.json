@@ -1,11 +1,10 @@
 {
-  "name": "realt23",
-  "version": "0.0.1",
+  "name": "realt",
+  "version": "0.0.2",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --port 3000",
-    "build": "ng build",
-    "test": "ng test",
+    "start": "ng serve realt23 --port 3000",
+    "promo": "ng serve promo --port 3000",
+    "build": "ng build realt23 && ng build promo",
     "deploy": "scp -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa -r dist/* rea7577906@ssh.rea7577906.nichost.ru:realt23.ru/docs"
   },
   "prettier": {
@@ -25,7 +24,6 @@
     "@angular/core": "^20.1.0",
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
-    "@angular/platform-browser-dynamic": "^20.1.0",
     "@angular/router": "^20.1.0",
     "tslib": "^2.3.0"
   },
@@ -36,6 +34,7 @@
     "@tailwindcss/cli": "^4.2.1",
     "@tailwindcss/postcss": "^4.2.1",
     "autoprefixer": "^10.4.27",
+    "ng-packagr": "^20.3.0",
     "tailwindcss": "^4.2.1",
     "typescript": "~5.8.2"
   }

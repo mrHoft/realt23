@@ -6,8 +6,8 @@
     "realt23": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
-      "sourceRoot": "src",
+      "root": "realt23",
+      "sourceRoot": "realt23/src",
       "prefix": "app",
       "architect": {
         "build": {
@@ -17,7 +17,7 @@
               "base": "dist",
               "browser": ""
             },
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "realt23/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
@@ -25,7 +25,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "realt23/src/styles.css"
             ]
           },
           "configurations": {
@@ -66,6 +66,95 @@
         },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
+        }
+      }
+    },
+    "promo": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "promo",
+      "sourceRoot": "promo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "outputPath": {
+              "base": "dist/promo",
+              "browser": ""
+            },
+            "tsConfig": "promo/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "promo/assets"
+              }
+            ],
+            "styles": [
+              "promo/src/styles.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "promo:build:production"
+            },
+            "development": {
+              "buildTarget": "promo:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        }
+      }
+    },
+    "shared": {
+      "projectType": "library",
+      "root": "shared",
+      "sourceRoot": "shared",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "options": {
+            "project": "shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "shared/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "shared/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
