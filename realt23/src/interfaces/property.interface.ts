@@ -17,13 +17,8 @@ export interface Property {
   description: string;
   images: string[];
   status: PropertyStatus;
-  agent: Agent;
+  agent: { name: string, photo: string };
   rating: number;
-}
-
-export interface Agent {
-  name: string;
-  photo: string;
 }
 
 export interface PropertyFilters {

@@ -25,6 +25,16 @@ export const MAIN_MENU: MainMenuCategory[] = [
         label: 'Рейтинг агентов',
         route: '/rating'
       },
+      {
+        id: 'how_it_works',
+        label: 'Как это работает',
+        route: '/how_it_works'
+      },
+      {
+        id: 'help',
+        label: 'Центр поддержки',
+        route: '/help'
+      },
     ]
   },
   {

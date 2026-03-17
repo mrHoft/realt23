@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 export interface Achievement {
+  id: string;
   label: string;
   value: number;
 }
@@ -10,11 +11,13 @@ export interface Achievement {
 })
 export class AchievementsService {
   private dummyAchievementsData: Achievement[] = [
-    { label: 'Недвижимость на продажу', value: 150 },
-    { label: 'Продано', value: 500 },
-    { label: 'Экспертные агенты', value: 25 },
-    { label: 'Застройщики', value: 40 },
-    { label: 'Довольные клиенты', value: 500 }
+    { id: 'lots_new', label: 'Новых объявления сегодня', value: 12 },
+    { id: 'lots', label: 'Недвижимость на продажу', value: 150 },
+    { id: 'sold', label: 'Продано', value: 500 },
+    { id: 'agents', label: 'Экспертные агенты', value: 25 },
+    { id: 'developers', label: 'Застройщики', value: 40 },
+    { id: 'happy_clients', label: 'Довольные клиенты', value: 500 },
+    { id: 'agents_new', label: 'Новых агентов в этом месяце', value: 12 },
   ];
 
   getAchievements(): Promise<Achievement[]> {

@@ -83,6 +83,7 @@
               "base": "dist/promo",
               "browser": ""
             },
+            "baseHref": "./",
             "tsConfig": "promo/tsconfig.app.json",
             "assets": [
               {

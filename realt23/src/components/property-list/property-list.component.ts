@@ -1,6 +1,6 @@
 import { Component, Input, signal, inject } from '@angular/core';
 import { Property } from '../../interfaces/property.interface';
-import { PropertyCardComponent } from '../property-card/property-card.component';
+import { PropertyCardComponent } from './property-card.component';
 import { GridListToggleComponent } from '../grid-list-toggle/grid-list-toggle.component';
 import { ModalService } from '../../services/modal.service';
 import { PropertyModalComponent } from '../property-modal/property-modal.component';

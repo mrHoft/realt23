@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Property, PropertyFilters } from '../interfaces/property.interface';
+import type { Property, PropertyFilters } from '../interfaces/property.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +45,7 @@ export class ApiService {
         '/images/18a1f33a8-8b85-48db-9a88-c938df532899.jpg'
       ],
       status: 'Luxury',
-      agent: { name: 'Михаил Федоров', photo: '/avatar/a042581f4e29026704d.jpg' },
+      agent: { name: 'Светлана Ковалева', photo: '/avatar/a042581f4e29026704d.jpg' },
       rating: 5
     },
     {
@@ -66,7 +66,7 @@ export class ApiService {
         '/images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg'
       ],
       status: 'From developer',
-      agent: { name: 'Анна Волкова', photo: '/avatar/a04258114e29026302d.jpg' },
+      agent: { name: 'Анна Волкова', photo: '/avatar/a04258114e29026304d.jpg' },
       rating: 4
     },
     {
@@ -86,7 +86,7 @@ export class ApiService {
         '/images/16514d781-a354-4ec8-94ba-14779f7ca0fd.jpg'
       ],
       status: 'Sold',
-      agent: { name: 'Дмитрий Петров', photo: '/avatar/a042581f4e29026024d.jpg' },
+      agent: { name: 'Светлана Ковалева', photo: '/avatar/a042581f4e29026704d.jpg' },
       rating: 5
     },
     {
@@ -107,7 +107,7 @@ export class ApiService {
         '/images/18a1f33a8-8b85-48db-9a88-c938df532899.jpg'
       ],
       status: 'Just listed',
-      agent: { name: 'Елена Морозова', photo: '/avatar/a04258114e29026302d.jpg' },
+      agent: { name: 'Татьяна Николаева', photo: '/avatar/a04258114e29026305d.jpg' },
       rating: 5
     },
     {
@@ -128,7 +128,7 @@ export class ApiService {
         '/images/16a97b1bc-d1f7-457e-b9f1-9deacbca32bd.jpg'
       ],
       status: 'From developer',
-      agent: { name: 'Александр Ковалев', photo: '/avatar/a042581f4e29026704d.jpg' },
+      agent: { name: 'Игорь Смирнов', photo: '/avatar/a04258114e29026302d.jpg' },
       rating: 5
     },
     {
@@ -148,7 +148,7 @@ export class ApiService {
         '/images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg'
       ],
       status: 'Just listed',
-      agent: { name: 'Татьяна Николаева', photo: '/avatar/a042581f4e29026024d.jpg' },
+      agent: { name: 'Анна Волкова', photo: '/avatar/a04258114e29026304d.jpg' },
       rating: 4
     },
     {
@@ -169,7 +169,7 @@ export class ApiService {
         '/images/18a1f33a8-8b85-48db-9a88-c938df532899.jpg'
       ],
       status: 'Sold',
-      agent: { name: 'Игорь Смирнов', photo: '/avatar/a04258114e29026302d.jpg' },
+      agent: { name: 'Ирина Кокина', photo: '/avatar/a04258114e29026303d.jpg' },
       rating: 5
     },
     {
@@ -190,7 +190,7 @@ export class ApiService {
         '/images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg'
       ],
       status: 'Luxury',
-      agent: { name: 'Наталья Кузнецова', photo: '/avatar/a042581f4e29026704d.jpg' },
+      agent: { name: 'Светлана Ковалева', photo: '/avatar/a042581f4e29026704d.jpg' },
       rating: 5
     }
   ];

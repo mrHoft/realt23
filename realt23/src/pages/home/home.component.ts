@@ -6,6 +6,13 @@ import { PropertyListComponent } from '../../components/property-list/property-l
 import { AchievementsComponent } from '../../components/achievements/achievements.component';
 import { CtaFormComponent } from '../../components/cta-form/cta-form.component';
 import { HeroComponent } from '../../components/hero/hero.component';
+import { ProcessStepsComponent } from '../../components/process-steps/process-steps.component';
+import { AgentShowcaseComponent } from '../../components/agent-showcase/agent-showcase.component';
+import { TrustSafetyComponent } from '../../components/trust-safety/trust-safety.component';
+import { FAQAccordionComponent } from '../../components/faq-accordion/faq-accordion.component';
+import { AgentTeaserComponent } from '../../components/agent-teaser/agent-teaser.component';
+import { AgencyListComponent } from '../../components/agency-list/agency-list.component';
+import { ButtonLinkComponent } from '../../components/button-link/button-link.component';
 
 @Component({
   selector: 'app-home',
@@ -13,9 +20,16 @@ import { HeroComponent } from '../../components/hero/hero.component';
   imports: [
     RouterLink,
     HeroComponent,
+    ButtonLinkComponent,
+    ProcessStepsComponent,
+    TrustSafetyComponent,
+    AgentShowcaseComponent,
     PropertyListComponent,
     AchievementsComponent,
-    CtaFormComponent
+    FAQAccordionComponent,
+    AgentTeaserComponent,
+    CtaFormComponent,
+    AgencyListComponent
   ],
   template: `
     <app-hero />
@@ -25,17 +39,18 @@ import { HeroComponent } from '../../components/hero/hero.component';
         <app-property-list [properties]="featuredProperties()" [loading]="false" />
 
         <div class="text-center mt-8">
-          <a routerLink="/catalog" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            Смотреть всё
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linecap="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
+          <app-button-link routerLink="/catalog" label="Смотреть всё"/>
         </div>
       </div>
     </section>
 
+    <app-agent-showcase/>
+    <app-agent-teaser/>
+    <app-agency-list/>
+    <app-process-steps/>
     <app-achievements />
+    <app-trust-safety/>
+    <app-faq-accordion/>
     <app-cta-form />
   `
 })

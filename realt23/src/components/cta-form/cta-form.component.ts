@@ -50,10 +50,7 @@ import { FormsModule } from '@angular/forms';
               rows="4"
               class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
             ></textarea>
-            <button
-              type="submit"
-              class="w-full md:w-auto px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
+            <button type="submit" class="w-full md:w-auto px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors cursor-pointer">
               Отправить сообщение
             </button>
           </form>
