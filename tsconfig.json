@@ -17,7 +17,7 @@
     "baseUrl": "./",
     "paths": {
       "shared": [
-        "shared/public-api.ts"
+        "shared"
       ]
     }
   },
@@ -27,14 +27,5 @@
     "strictInputAccessModifiers": true,
     "typeCheckHostBindings": true,
     "strictTemplates": true
-  },
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    }
-  ]
+  }
 }
