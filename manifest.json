@@ -1,0 +1,52 @@
+{
+  "name": "realt23",
+  "short_name": "realt23",
+  "start_url": "/",
+  "scope": "/",
+  "description": "Быстрая и бесплатная платформа недвижимости без регистрации. Поиск объектов, контакты продавцов и профессиональные инструменты для агентов — всё без комиссий.",
+  "categories": [
+    "lifestyle",
+    "business",
+    "productivity"
+  ],
+  "display": "fullscreen",
+  "theme_color": "#1e1e2e",
+  "background_color": "#1e1e2e",
+  "icons": [
+    {
+      "src": "./icons/logo_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./icons/logo_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./icons/logo_180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "./icons/logo_152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "./icons/logo_120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "./icons/logo_96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./icons/logo_72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    }
+  ]
+}
