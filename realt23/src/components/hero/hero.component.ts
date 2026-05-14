@@ -18,7 +18,7 @@ import { SearchFormComponent } from '../search-form/search-form.component';
           class="absolute min-w-full min-h-full object-cover"
           [class.opacity-50]="themeService.isDark()"
         >
-          <source src="/images/promo.mp4" type="video/mp4">
+          <source src="images/promo.mp4" type="video/mp4">
         </video>
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/40 dark:bg-black/60"></div>

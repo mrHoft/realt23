@@ -9,7 +9,7 @@ export class AgentService {
     {
       id: 1,
       name: 'Дмитрий Кузнецов',
-      photo: '/avatar/a042581f4e29026024d.jpg',
+      photo: 'avatar/a042581f4e29026024d.jpg',
       rating: 5,
       verified: true,
       responseTime: 7200,
@@ -19,7 +19,7 @@ export class AgentService {
     {
       id: 2,
       name: 'Ирина Кокина',
-      photo: '/avatar/a04258114e29026303d.jpg',
+      photo: 'avatar/a04258114e29026303d.jpg',
       rating: 5,
       verified: true,
       responseTime: 3600,
@@ -29,7 +29,7 @@ export class AgentService {
     {
       id: 3,
       name: 'Светлана Ковалева',
-      photo: '/avatar/a042581f4e29026704d.jpg',
+      photo: 'avatar/a042581f4e29026704d.jpg',
       rating: 5,
       verified: true,
       responseTime: 10800,
@@ -39,7 +39,7 @@ export class AgentService {
     {
       id: 4,
       name: 'Татьяна Николаева',
-      photo: '/avatar/a04258114e29026305d.jpg',
+      photo: 'avatar/a04258114e29026305d.jpg',
       rating: 4,
       verified: true,
       responseTime: 3600,
@@ -49,7 +49,7 @@ export class AgentService {
     {
       id: 5,
       name: 'Игорь Смирнов',
-      photo: '/avatar/a04258114e29026302d.jpg',
+      photo: 'avatar/a04258114e29026302d.jpg',
       rating: 5,
       verified: true,
       responseTime: 3600,
@@ -59,7 +59,7 @@ export class AgentService {
     {
       id: 6,
       name: 'Анна Волкова',
-      photo: '/avatar/a04258114e29026304d.jpg',
+      photo: 'avatar/a04258114e29026304d.jpg',
       rating: 4,
       verified: true,
       responseTime: 10800,

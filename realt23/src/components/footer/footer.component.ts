@@ -69,7 +69,7 @@ import { RouterLink } from '@angular/router';
                 <!-- Social Icons (if needed separately) -->
                 <div class="flex space-x-3">
                   <a href="https://t.me/some_link" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                    <img class="link_icon" width="20" src="/icons/telegram.svg" alt="telegram"/>
+                    <img class="link_icon" width="20" src="icons/telegram.svg" alt="telegram"/>
                   </a>
                 </div>
               </div>

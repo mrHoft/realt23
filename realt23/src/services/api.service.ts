@@ -20,11 +20,11 @@ export class ApiService {
       type: 'House',
       description: 'Потрясающая современная архитектура с чистыми линиями и обширными стеклянными стенами. Просторная гостиная открытой планировки, кухня для шеф-повара и частный двор-оазис.',
       images: [
-        '/images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg',
-        '/images/16a97b1bc-d1f7-457e-b9f1-9deacbca32bd.jpg'
+        'images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg',
+        'images/16a97b1bc-d1f7-457e-b9f1-9deacbca32bd.jpg'
       ],
       status: 'Just listed',
-      agent: { name: 'Дмитрий Кузнецов', photo: '/avatar/a042581f4e29026024d.jpg' },
+      agent: { name: 'Дмитрий Кузнецов', photo: 'avatar/a042581f4e29026024d.jpg' },
       rating: 5
     },
     {
@@ -41,11 +41,11 @@ export class ApiService {
       type: 'Apartment',
       description: 'Испытайте роскошную жизнь в этом захватывающем пентхаусе. Панорамные окна от пола до потолка открывают вид на город. Частный лифт.',
       images: [
-        '/images/16514d781-a354-4ec8-94ba-14779f7ca0fd.jpg',
-        '/images/18a1f33a8-8b85-48db-9a88-c938df532899.jpg'
+        'images/16514d781-a354-4ec8-94ba-14779f7ca0fd.jpg',
+        'images/18a1f33a8-8b85-48db-9a88-c938df532899.jpg'
       ],
       status: 'Luxury',
-      agent: { name: 'Светлана Ковалева', photo: '/avatar/a042581f4e29026704d.jpg' },
+      agent: { name: 'Светлана Ковалева', photo: 'avatar/a042581f4e29026704d.jpg' },
       rating: 5
     },
     {
@@ -62,11 +62,11 @@ export class ApiService {
       type: 'House',
       description: 'Идеально подходит для растущей семьи. Просторный двор, современная кухня, расположение в районе с лучшими школами.',
       images: [
-        '/images/16a97b1bc-d1f7-457e-b9f1-9deacbca32bd.jpg',
-        '/images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg'
+        'images/16a97b1bc-d1f7-457e-b9f1-9deacbca32bd.jpg',
+        'images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg'
       ],
       status: 'From developer',
-      agent: { name: 'Анна Волкова', photo: '/avatar/a04258114e29026304d.jpg' },
+      agent: { name: 'Анна Волкова', photo: 'avatar/a04258114e29026304d.jpg' },
       rating: 4
     },
     {
@@ -83,10 +83,10 @@ export class ApiService {
       type: 'Apartment',
       description: 'Эффективное и стильное жилье в центре города. Высокие потолки, полированные бетонные полы, система умный дом.',
       images: [
-        '/images/16514d781-a354-4ec8-94ba-14779f7ca0fd.jpg'
+        'images/16514d781-a354-4ec8-94ba-14779f7ca0fd.jpg'
       ],
       status: 'Sold',
-      agent: { name: 'Светлана Ковалева', photo: '/avatar/a042581f4e29026704d.jpg' },
+      agent: { name: 'Светлана Ковалева', photo: 'avatar/a042581f4e29026704d.jpg' },
       rating: 5
     },
     {
@@ -103,11 +103,11 @@ export class ApiService {
       type: 'Townhouse',
       description: 'Просторный таунхаус с большой террасой и видом на реку. Два парковочных места, отдельный вход.',
       images: [
-        '/images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg',
-        '/images/18a1f33a8-8b85-48db-9a88-c938df532899.jpg'
+        'images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg',
+        'images/18a1f33a8-8b85-48db-9a88-c938df532899.jpg'
       ],
       status: 'Just listed',
-      agent: { name: 'Татьяна Николаева', photo: '/avatar/a04258114e29026305d.jpg' },
+      agent: { name: 'Татьяна Николаева', photo: 'avatar/a04258114e29026305d.jpg' },
       rating: 5
     },
     {
@@ -124,11 +124,11 @@ export class ApiService {
       type: 'Condo',
       description: 'Новостройка в центре города. Подземный паркинг, закрытая территория, современные планировки.',
       images: [
-        '/images/16514d781-a354-4ec8-94ba-14779f7ca0fd.jpg',
-        '/images/16a97b1bc-d1f7-457e-b9f1-9deacbca32bd.jpg'
+        'images/16514d781-a354-4ec8-94ba-14779f7ca0fd.jpg',
+        'images/16a97b1bc-d1f7-457e-b9f1-9deacbca32bd.jpg'
       ],
       status: 'From developer',
-      agent: { name: 'Игорь Смирнов', photo: '/avatar/a04258114e29026302d.jpg' },
+      agent: { name: 'Игорь Смирнов', photo: 'avatar/a04258114e29026302d.jpg' },
       rating: 5
     },
     {
@@ -145,10 +145,10 @@ export class ApiService {
       type: 'Land',
       description: 'Участок 6 соток под индивидуальное жилищное строительство. Все коммуникации по границе.',
       images: [
-        '/images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg'
+        'images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg'
       ],
       status: 'Just listed',
-      agent: { name: 'Анна Волкова', photo: '/avatar/a04258114e29026304d.jpg' },
+      agent: { name: 'Анна Волкова', photo: 'avatar/a04258114e29026304d.jpg' },
       rating: 4
     },
     {
@@ -165,11 +165,11 @@ export class ApiService {
       type: 'NRA',
       description: 'Нежилое помещение на 1 этаже жилого дома. Отдельный вход, высокие потолки, подходит под офис или магазин.',
       images: [
-        '/images/16514d781-a354-4ec8-94ba-14779f7ca0fd.jpg',
-        '/images/18a1f33a8-8b85-48db-9a88-c938df532899.jpg'
+        'images/16514d781-a354-4ec8-94ba-14779f7ca0fd.jpg',
+        'images/18a1f33a8-8b85-48db-9a88-c938df532899.jpg'
       ],
       status: 'Sold',
-      agent: { name: 'Ирина Кокина', photo: '/avatar/a04258114e29026303d.jpg' },
+      agent: { name: 'Ирина Кокина', photo: 'avatar/a04258114e29026303d.jpg' },
       rating: 5
     },
     {
@@ -186,11 +186,11 @@ export class ApiService {
       type: 'House',
       description: 'Роскошный дом с собственной сауной и крытым бассейном. Ландшафтный дизайн, система охраны.',
       images: [
-        '/images/16a97b1bc-d1f7-457e-b9f1-9deacbca32bd.jpg',
-        '/images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg'
+        'images/16a97b1bc-d1f7-457e-b9f1-9deacbca32bd.jpg',
+        'images/11730a045-929a-45d1-b8b0-27b4fb237d45.jpg'
       ],
       status: 'Luxury',
-      agent: { name: 'Светлана Ковалева', photo: '/avatar/a042581f4e29026704d.jpg' },
+      agent: { name: 'Светлана Ковалева', photo: 'avatar/a042581f4e29026704d.jpg' },
       rating: 5
     }
   ];

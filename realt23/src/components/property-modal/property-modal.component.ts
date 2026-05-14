@@ -117,11 +117,11 @@ import { CustomCurrencyPipe } from '../../pipe/custom-currency.pipe';
                   <span class="text-gray-700 dark:text-gray-200">{{ property.square }} кв.м</span>
                 </div>
                 <div class="flex items-center">
-                  <img src="/icons/bedroom.svg" alt="bedroom" class="w-5 h-5 mr-2"/>
+                  <img src="icons/bedroom.svg" alt="bedroom" class="w-5 h-5 mr-2"/>
                   <span class="text-gray-700 dark:text-gray-200">{{ property.bedrooms }} спален</span>
                 </div>
                 <div class="flex items-center">
-                  <img src="/icons/bathroom.svg" alt="bathroom" class="w-5 h-5 mr-2"/>
+                  <img src="icons/bathroom.svg" alt="bathroom" class="w-5 h-5 mr-2"/>
                   <span class="text-gray-700 dark:text-gray-200">{{ property.bathrooms }} санузлов</span>
                 </div>
                 <div class="flex items-center">

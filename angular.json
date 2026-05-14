@@ -30,6 +30,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/realt23/",
+              "deployUrl": "/realt23/",
               "budgets": [
                 {
                   "type": "initial",
@@ -97,6 +99,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/realt23/promo/",
+              "deployUrl": "/realt23/promo/",
               "budgets": [
                 {
                   "type": "initial",
